@@ -1,7 +1,9 @@
 <snippet>
-#Ronin-Web
-The Ronin web app informs users whether their article or news source is credible, questionable, or malicious.
+#NewsHound-Web
+The NewsHound web app is really simple. It tells you whether an article or news source is credible, questionable, or malicious.
 
 ##How it Works
-More details to come soon!
+1. Copy and Paste a URL
+2. Press Submit
+3. The app displays "credible", "questionable", or "malicious" based on our analysis of the article.
 </snippet>
