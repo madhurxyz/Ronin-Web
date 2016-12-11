@@ -50,7 +50,7 @@
 		<link rel="stylesheet" href="assets/css/bootstrap-theme.css"> -->
 
 		<!--Style Sheets-->
-		<link href="../static/css/style.css" rel="stylesheet">
+		<link href="../static/css/main.css" rel="stylesheet">
 
 		<!--Other Style-->
 		<style>
@@ -74,8 +74,11 @@
 				<p class="description">sniffing out fake news</p>
 			</div>
 			<div class="content">
-				<input class="url" type="text" name="url" value="http://" placeholder="http://" >
-				<input  class="submit-btn" type="submit" value="Submit">
+				<input id="url" class="url" type="text" name="url" placeholder="http://" placeholder="http://" >
+				<button class="button" onclick="update()">Submit</button>
+			</div>
+			<div class="return">
+				<p id="answer" class="answer"></p>
 			</div>
 			<div class="footer">
 				<p class="copyright">&copy;2016 Team NewsHound</p>
@@ -90,6 +93,22 @@
 
 		<!--Other Scripts-->
 		<script>
+		function update() {
+		  random = Math.floor(Math.random()*3 + 1);
+		  if (random == 3) {
+		    document.getElementById("answer").innerHTML = "Malicious";
+		    document.body.style.backgroundImage = "url('../static/img/malicious.jpg')";
+		  }
+		  if (random == 2) {
+		    document.getElementById("answer").innerHTML = "Questionable";
+				document.body.style.backgroundImage = "url('../static/img/questionable.jpg')"
+		  }
+		  if (random == 1) {
+		    document.getElementById("answer").innerHTML = "Credible";
+				document.body.style.backgroundImage = "url('../static/img/credible.jpg')"
+		  }
+		}
+
 		</script>
 	</body>
 </html>

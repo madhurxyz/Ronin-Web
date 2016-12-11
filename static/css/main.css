@@ -6,11 +6,13 @@ html, body{
 	width: 100%;
 	font-family: "Montserrat";
 }
+body {
+	background-image: url("../img/background.png");
+	background-repeat: repeat;
+}
 .container {
 	width: 100%;
 	height: 100vh;
-	background-image: url("../img/background.png");
-	background-repeat: repeat;
 
 }
 .heading{
@@ -40,9 +42,6 @@ input[type="text"]{
 	font-size: 15px;
 	font-family: "Montserrat";
 }
-input[type="submit"]{
-	font-family: "Montserrat";
-}
 .logo{
 
 }
@@ -63,15 +62,25 @@ input[type="submit"]{
     color: #999;
     background-color: #ddd;
 }
-.submit-btn{
-	width: ;
+.button {
     background-color: #3a428b;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+		border-radius: 8px;
+		font-family: "Montserrat";
+}
+.return {
+	font-size: 40px;
+	text-align: center;
+	width:100%;
+	position: relative;
+	top: 20%;
+	color: white;
 }
 .copyright{
 
@@ -79,6 +88,9 @@ input[type="submit"]{
 @media (max-width: 950px) {
 	.heading img {
 		width: 20%;
+	}
+	.return {
+		top: 15%;
 	}
 }
 @media (max-width: 500px) {
@@ -88,7 +100,9 @@ input[type="submit"]{
 	.footer{
 		font-size: 15px;
 	}
-
+	.return {
+		top: 20%;
+	}
 }
 @media (max-width: 400px) {
 	.heading img {
@@ -97,5 +111,7 @@ input[type="submit"]{
 	.footer{
 		font-size: 12px;
 	}
-
+	.return {
+		top: 20%;
+	}
 }
