@@ -18,15 +18,19 @@ SearchManager.prototype._handleClick = function() {
 }
 SearchManager.prototype._handleSuccess = function(response) {
   var score = response.score;
-  if (score<50) {
-    this.displayText.html("Looks Fake");
-    document.body.style.backgroundImage = "url('../static/img/malicious.jpg')"
-  } else if (score<80) {
-    this.displayText.html("Questionable");
-    document.body.style.backgroundImage = "url('../static/img/questionable.jpg')"
-  } else {
-    this.displayText.html("Looks Good");
-    document.body.style.backgroundImage = "url('../static/img/credible.jpg')"
+  if (!score){
+      this.displayText.html("Enter Valid URL");
+    } else {
+      if (score<50) {
+        this.displayText.html("Looks Fake");
+        document.body.style.backgroundImage = "url('../static/img/malicious.jpg')"
+      } else if (score<80) {
+        this.displayText.html("Questionable");
+        document.body.style.backgroundImage = "url('../static/img/questionable.jpg')"
+      } else {
+        this.displayText.html("Looks Good");
+        document.body.style.backgroundImage = "url('../static/img/credible.jpg')"
+    }
   }
 }
 
