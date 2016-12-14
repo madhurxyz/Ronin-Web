@@ -85,6 +85,9 @@ input[type="text"]{
 .copyright{
 
 }
+.loading {
+	display: none;
+}
 @media (max-width: 950px) {
 	.heading img {
 		width: 20%;
